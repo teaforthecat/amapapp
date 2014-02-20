@@ -1,0 +1,41 @@
+# properties do
+#   search_value @geo.search_value
+#   map_bounds @geo.map_bounds
+# end
+# type @geo.type
+# geometry do
+#     type @geo.shape
+#     coordinates @geo.coordinates
+# end
+properties do
+  search_value @geo.search_value
+  map_bounds @geo.map_bounds
+end
+type "Feature"
+geometry do
+    type "Polygon"
+    coordinates Array.new([
+            [
+                [
+                    175.2847623825073,
+                    -37.77495501866911
+                ],
+                [
+                    175.2933883666992,
+                    -37.77298755890846
+                ],
+                [
+                    175.29175758361816,
+                    -37.779398571318765
+                ],
+                [
+                    175.28845310211182,
+                    -37.78075532805877
+                ],
+                [
+                    175.2847623825073,
+                    -37.77495501866911
+                ]
+            ]
+        ])
+end

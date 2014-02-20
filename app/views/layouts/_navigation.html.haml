@@ -1,0 +1,13 @@
+- if current_user
+  %dl.sub-nav
+    -# TODO: use columns instead
+    -# whitespace
+    %dt
+    %dd
+    %dd
+    -# whitespace
+    - [["GeoMaps", geos_path],
+      ].each do |label,path|
+      %dd{class: ('active' if (path == request.path.sub(/\/\d+(\/edit)?/,'')) ) }
+        = link_to label, path
+  %hr

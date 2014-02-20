@@ -1,0 +1,38 @@
+.row
+  .small-12.columns
+    %h3 Edit Profile
+    -#{resource_name.to_s.humanize}
+
+
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {'data-abide' => true}) do |f|
+  .row
+    .small-8.columns
+      .row= devise_error_messages!
+      .row
+        = f.input :email, input_html: {autofocus: true, type: 'email'}, required: true
+      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+        %i  Currently waiting confirmation for: #{ resource.unconfirmed_email }
+
+
+      .row
+        = f.label :password do
+          Password
+          .right
+            %i (leave blank if you don't want to change it)
+        = f.input_field :password
+      .row= f.input :password_confirmation
+
+      .row
+        = f.label :current_password do
+          Current Password
+          .right
+            %i (we need your current password to confirm your changes)
+        = f.input_field :current_password
+
+      .row
+        = f.submit "Update", class: "button"
+%br
+%br
+%h4 Cancel my account
+= button_to "Cancel my account", registration_path(resource_name),
+  :data => { :confirm => "Are you sure?" }, :method => :delete, class: 'button alert'

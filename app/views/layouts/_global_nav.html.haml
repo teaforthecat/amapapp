@@ -1,0 +1,37 @@
+%nav.top-bar{"data-topbar" => true}
+  %ul.title-area
+    %li.name
+      %h1= link_to 'Govdelivery', "/"
+
+
+  %section.right-small
+    %a.right-off-canvas-toggle.menu-icon
+      %span
+
+  %section.top-bar-section.middle
+    %ul.right
+      - if user_signed_in?
+        %li
+          = link_to "Welcome #{ current_user.email }", edit_user_registration_path(current_user)
+        %li.divider
+      %li
+        = link_to "Support","#"
+      %li.divider
+      %li
+        = link_to "Help","#"
+      %li.divider
+      %li
+        - if user_signed_in?
+          = link_to 'Logout', destroy_user_session_path, :method => :delete
+        - else
+          = link_to 'Login', new_user_session_path
+
+
+
+
+
+%dl.sub-nav.grey
+  %dd
+    -# whitespace
+  %dd
+    %h3= link_to 'AmapApp', root_path

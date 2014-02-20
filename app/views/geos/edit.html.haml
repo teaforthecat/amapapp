@@ -1,0 +1,12 @@
+-# the iframe param will be present when the geo is requested a second time, from the iframe src
+- if params[:iframe]
+  -# warning: the format is set to json now :)
+  = render 'map', path: geo_path(@geo, format: 'json')
+  -# holds data to render the map
+  #currentGeoObject
+  :javascript
+    $('#currentGeoObject').data( 'geo', #{ @geo.geojson.to_json });
+
+- else
+  = render 'form'
+  = render 'map_modal', link_text: 'Edit Map', src: edit_geo_path(@geo, iframe: true)

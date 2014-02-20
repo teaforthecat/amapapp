@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}
+    = stylesheet_link_tag "leaflet-js"
+    = stylesheet_link_tag "jackedup"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "jquery"
+    = javascript_include_tag "jquery_ujs"
+    -# = javascript_include_tag "leaflet"
+    = csrf_meta_tag
+  %body
+    :css
+      body {
+          padding: 0;
+          margin: 0;
+      }
+      html, body, #map {
+          height: 100%;
+      }
+
+    - if @render_nav
+      = stylesheet_include_tag "foundation-nav-only"
+      %header
+        = render 'layouts/global_nav'
+        = render 'layouts/navigation'
+
+    = yield
+    = javascript_include_tag "geo_iframe"

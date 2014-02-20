@@ -1,0 +1,14 @@
+%h1 Geos
+
+.row
+  .columns.medium-19
+  .columns.medium-3
+    %a.button{href: '#', data: {'reveal-id' => 'ensMap', reveal: true}}
+      New Geo
+.row
+  %table
+    - @geos.each do |geo|
+      %tr
+        %td= geo.name
+        %td= link_to 'Edit', edit_geo_path(geo), class: 'button'
+        %td= link_to 'Destroy', geo, :method => :delete, :data => { :confirm => 'Are you sure?' }

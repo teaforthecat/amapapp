@@ -1,0 +1,5 @@
+- if params[:iframe]
+  = render 'map', path: geos_path(sse_channel: @geo.sse_channel) #POST to :create
+- else
+  = render 'form'
+  = render 'map_modal', link_text: 'Add Map', src: new_geo_path(iframe: true)
