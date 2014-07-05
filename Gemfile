@@ -5,12 +5,6 @@ gem 'mysql2'
 
 gem 'turbolinks'
 
-# gem 'foundation-rails', TODO: use '5.0.4' when it comes out
-gem 'foundation-rails', github: 'Retistic/foundation-rails'
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
 
 # looks like 3.1.7 missed out on key pr #45
 gem 'json_builder', github: 'dewski/json_builder'
@@ -26,9 +20,6 @@ gem 'paper_trail', '~> 3.0'
 gem 'roo'
 
 gem 'will_paginate', '~> 3.0'
-gem 'ckeditor_rails'
-gem 'underscore-rails'
-gem 'leaflet-js'
 
 
 
@@ -36,6 +27,18 @@ gem 'devise'
 gem 'simple_form'
 gem 'capybara'
 
+
+#assets
+# gem 'foundation-rails', TODO: use '5.0.4' when it comes out
+gem 'foundation-rails', github: 'Retistic/foundation-rails'
+gem 'sass-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'ckeditor_rails'
+gem 'underscore-rails'
+gem 'leaflet-js'
+gem 'therubyracer'
 
 group :development do
   gem "guard-rspec"
