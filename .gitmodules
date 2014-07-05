@@ -1,0 +1,6 @@
+[submodule "vendor/GeoSearch"]
+	path = vendor/GeoSearch
+	url = https://github.com/smeijer/L.GeoSearch.git
+[submodule "vendor/EventSource"]
+	path = vendor/EventSource
+	url = https://github.com/Yaffle/EventSource.git
