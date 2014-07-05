@@ -3,7 +3,8 @@
 .row
   .columns.medium-19
   .columns.medium-3
-    %a.button{href: '#', data: {'reveal-id' => 'ensMap', reveal: true}}
+    = link_to "New Geo", new_geo_path, class: 'button'
+    %a.button{href: '#', data: {reveal_id: 'ensMap', reveal: true, no_turbo: true}}
       New Geo
 .row
   %table

@@ -1,1 +1,1 @@
-/Users/cthompson/projects/ens/vendor/GeoSearch/src/js/l.geosearch.provider.esri.js
+../../GeoSearch/src/js/l.geosearch.provider.esri.js
